@@ -20,5 +20,25 @@ namespace KisboltKeszletkezelo
         {
             InitializeComponent();
         }
+
+        private void termekMenu_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void vasarlokMenu_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void felhasznaloMenu_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void kilepesMenu_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,18 +13,19 @@ namespace KisboltKeszletkezelo.Models
         public User()
         {
         }
+        [AutoIncrement,PrimaryKey]
         public int Id { get; set; }
         public string FelhasznaloNev { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; }
+        public string Jelszo { get; set; }
+        public string Szerep { get; set; }
 
         public User(string felhasznaloNev, string email, string password, string role)
         {
             FelhasznaloNev = felhasznaloNev;
             Email = email;
-            Password = password;
-            Role = role;
+            Jelszo = password;
+            Szerep = role;
         }
     }
 }

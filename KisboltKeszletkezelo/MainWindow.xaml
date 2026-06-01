@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KisboltKeszletkezelo"
         mc:Ignorable="d"
-        Title="Kisbolt készletkezelő" Height="900" Width="1200">
+        
+        Title="Kisbolt készletkezelő" Height="500" Background="Wheat" Width="900">
+    <Window.Resources>
+        <ResourceDictionary Source="/Resources/Dictionary.xaml" />
+    </Window.Resources>
     <StackPanel>
         <TextBlock Text="Kisbolt készletkezelő" FontSize="24" FontWeight="Bold" Margin="10" Foreground="Black" HorizontalAlignment="Center"></TextBlock>
+    
+    <StackPanel>
+        <ListView Background="Beige" Width="500" Height="430" >
+               <ListViewItem x:Name="termekMenu" 
+                             Style="{StaticResource ResourceKey=ListItemStyle}" Selected="termekMenu_Selected" MouseLeftButtonUp="termekMenu_MouseLeftButtonUp">
+                   Termékek
+               </ListViewItem>
+                <ListViewItem x:Name="vasarlokMenu"
+                              Style="{StaticResource ResourceKey=ListItemStyle}" Selected="termekMenu_Selected" MouseLeftButtonUp="vasarlokMenu_MouseLeftButtonUp">
+                    Vásárlók
+                </ListViewItem>
+                <ListViewItem x:Name="felhasznaloMenu"
+                              Style="{StaticResource ResourceKey=ListItemStyle}" Selected="termekMenu_Selected" MouseLeftButtonUp="felhasznaloMenu_MouseLeftButtonUp"
+                              >
+                    Felhasználók
+                </ListViewItem>
+                <ListViewItem
+                    x:Name="kilepesMenu"
+                    Background="Red"
+                    Content="Bezárás"
+                    Foreground="White"
+                    MouseLeftButtonUp="kilepesMenu_MouseLeftButtonUp"
+                    Style="{StaticResource ResourceKey=ListItemStyle}" />
+            </ListView>
+    </StackPanel>
     </StackPanel>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace KisboltKeszletkezelo.Models
         public Product()
         {
         }
-
+        [AutoIncrement,PrimaryKey]
         public int Id { get; set; }
         public string Nev { get; set; }
         public string Leiras { get; set; }
