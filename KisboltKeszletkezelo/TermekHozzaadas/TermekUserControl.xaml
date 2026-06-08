@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="KisboltKeszletkezelo.TermekHozzaadas.Termek"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KisboltKeszletkezelo.TermekHozzaadas"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <StackPanel>
+        <DataGrid
+            x:Name="datagridFelhasznalok"
+            Width="1100"
+            Height="600"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            IsReadOnly="True"
+            SelectionChanged="datagridFelhasznalok_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="ID" />
+                <DataGridTextColumn Binding="{Binding Nev}" Header="Termék név:" />
+                <DataGridTextColumn Binding="{Binding Leiras}" Header="Leírás:" />
+                <DataGridTextColumn Binding="{Binding Ar}" Header="Ár:" />
+                <DataGridTextColumn Binding="{Binding Mennyiseg}" Header="Mennyiség:" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Margin="130,10,130,0">
+            <StackPanel Width="300" Background="LightGray">
+                <TextBlock>Termék név:</TextBlock>
+                <TextBox x:Name="nevText" />
+                <TextBlock>
+                    Leírás:
+                </TextBlock>
+                <TextBox x:Name="leirasText" />
+                <TextBox x:Name="arText" />
+                <TextBlock>Mennyiség:</TextBlock>
+                <TextBox x:Name="mennyisegText" />
+            </StackPanel>
+            <StackPanel>
+                <Button
+                    x:Name="mentesBtn"
+                    Width="200"
+                    Background="Green"
+                    Click="mentesBtn_Click"
+                    Content="Mentés"
+                    Foreground="White"
+                    Visibility="Visible" />
+                <Button
+                    x:Name="torlesBtn"
+                    Width="200"
+                    Background="Red"
+                    Click="torlesBtn_Click"
+                    Content="Törlés"
+                    Foreground="White"
+                    Visibility="Hidden" />
+                <Button
+                    x:Name="modBtn"
+                    Width="200"
+                    Background="Yellow"
+                    Click="modBtn_Click"
+                    Content="Módosítás"
+                    Visibility="Hidden" />
+            </StackPanel>
+
+        </WrapPanel>
+    </StackPanel>
+</UserControl>
